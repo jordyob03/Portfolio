@@ -1,0 +1,53 @@
+.page{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+
+}
+
+#intro{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+#experience {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .workTerm {
+    display: flex;
+    flex-direction: row; /* Aligns children left to right within workTerm */
+    text-align: left; /* Aligns text to the left */
+    align-items: center; /* Align items vertically */
+  }
+  .Logo{
+    width: 200px;
+
+
+  }
+  
+#extracurriculars{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+  
+.extracurricular {
+  display: flex;
+  flex-direction: row; /* Aligns children left to right within workTerm */
+  text-align: left; /* Aligns text to the left */
+  align-items: center; /* Align items vertically */
+}
+
