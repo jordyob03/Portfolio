@@ -1,53 +1,162 @@
+body {
+  color: #656565; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .page{
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #F9F5F6;
     padding: 10px;
 
 }
-
-#intro{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-
-#experience {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .workTerm {
-    display: flex;
-    flex-direction: row; /* Aligns children left to right within workTerm */
-    text-align: left; /* Aligns text to the left */
-    align-items: center; /* Align items vertically */
-  }
-  .Logo{
-    width: 200px;
-
-
-  }
-  
-#extracurriculars{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-}
-  
-.extracurricular {
+.navbar {
   display: flex;
-  flex-direction: row; /* Aligns children left to right within workTerm */
-  text-align: left; /* Aligns text to the left */
-  align-items: center; /* Align items vertically */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8E8EE;
+  padding: 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
+.logo {
+  color: #656565;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav-buttons li{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.nav-buttons{
+  list-style: none;
+  display: flex;
+  
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+.nav-buttons a {
+  text-decoration: none;
+  color: #656565;
+  padding: 14px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+.nav-buttons a:hover {
+  background-color: #FDCEDF;
+}
+
+
+#introContainer {
+    display: flex;
+    align-items: center; 
+    margin-top: 150px;
+    margin-bottom: 50px;
+    gap: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#headshot {
+  width: 450px; /* Set the width of the image */
+  height: auto;
+}
+
+#introHeaderText {
+
+}
+
+.scroll-button {
+  margin-top: 10px; /* Space above the button */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #F2BED1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.portfolio-section {
+  text-align: center;
+}
+
+.scroll-button:hover {
+  background-color: #FDCEDF;
+}
+
+#experience{
+  padding-top: 50px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+#extracurriculars{
+  padding-top: 50px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px; 
+  padding: 20px; 
+}
+
+/* Grid item styling */
+.grid-item {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+  text-align: center; 
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  border-radius: 8px; 
+  background-color: #F8E8EE; 
+  transition: transform 0.2s;
+  box-sizing: border-box; /* Ensures padding is included in the total width and height */
+  width: 500px; /* Fixed width for grid items */
+  height: 500px; /* Fixed height for grid items */
+}
+
+.grid-image {
+  height: 30%; /* Image width is 70% of the grid item width */
+  width: auto; /* Maintain aspect ratio of the image */
+  object-fit: cover; /* Ensures the image covers the container, maintaining aspect ratio */
+  display: block; /* Removes the default inline spacing */
+  margin-bottom: 10px; /* Space between the image and the text */
+}
+
+/* Text styling */
+.grid-text {
+  font-size: 16px; /* Font size for the text below the image */
+  color: #333; /* Text color */
+}
+
+/* Hover effect for grid items */
+.grid-item:hover {
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #F2BED1;
+
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switches to a single column on narrow screens */
+  }
+}
+
+
 

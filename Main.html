@@ -7,97 +7,125 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Jordyn O'Brien</title>
         <link rel="stylesheet" href="assets/CSS/mainStyle.css">
+        <script>
+          function scrollToNextSection() {
+            const nextSection = document.getElementById('experience');
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        </script>
     </head>
 
     <body class="page">
 
+      <nav class="navbar">
+        <div class="logo">Jordyn O'Brien</div>
+        <ul class="nav-buttons">
+            <li><a href="#">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/jordynob/">LinkedIn</a></li>
+            <li><a href="https://github.com/jordyob03">Github</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div id="intro">
-          
-          <img id="headshot" src="/assets/Images/Headshot.png">
+      <div id="introContainer">
+        <img id="headshot" src="/assets/Images/testSquare.png">
+        <div>
           <h1 id="introHeaderText">
             Hi, I'm Jordyn!
           </h1>
-          <p class="paragraph">
-            I'm a fourth year Computer Engineering student at Memorial University of Newfoundland with experience in 
-            simulation developement, web development and robotics.  
+          <p id="introText">
+            I'm a fourth year engineering student at Memorial University of Newfoundland. I am interested in various fields of software development such as robotics, 
+            simulation development and graphics programming. I have experience in desktop application development, web development and ROS development. This website
+            is meant to highlight my experience, projects, and achievements.
           </p>
         </div>
-    
-      <div id="experience">
+      </div>
+
+      <div class="portfolio-section">
+        <h2>My Portfolio</h2>
+        <button class="scroll-button" onclick="scrollToNextSection()">↓</button>
+      </div>
+
+      <div id="experience">  
         <h1>Work Terms</h1>
-        <div class="workTerm" id="CRC">
-            <img class="Logo" src="/assets/Images/CRCLogo.png">
-            <ul>
-              <li>
-                Updated UI of 5G network visualization web application using React.js
-              </li>
-              <li>
-                Used algorithm to get only necassary data points to display 3D antenna pattern plot 
-              </li>
+        <div class="grid-container">
+          <div class="grid-item" id="CRC">
+              <img src="/assets/Images/CRCLogo.png" alt="Description of Image 1" class="grid-image">
+              <p class="grid-text">Communications Research Centre Canada</p>
+              <p>Software Development Student</p>
+              <p>May 2024 - August 2024</p>
+              <p>I worked on a map based web application used by researchers to visualize 5G networks 
+                and interference simulation results. I used React to add features to the application along with 
+                JavaScript libraries such as Leaflet for map components and Plotly.js for displaying data.
+              </p>
+          </div>
 
-
-            </ul>
-        </div>
-        <div class="workTerm" id="Avalon">
-          <img class="Logo" src="/assets/Images/AvalonLogo.png">
-          <ul>
-            <li>Implemented brightness, 
-              contrast and exposure controls for holographic displays by modifying 
-              sRGB values (HLSL) during ray tracing giving users a customizable viewing experience</li>
-            <li>Debugged and fixed (C++) 15 reported issues related to GUI, rendering, and user controls</li>
-            <li>Implemented persistent user settings using config files (TOML) to reload user settings on start-up</li>
-            <li>Tested builds (Jenkins) of 3-D rendering application on holographic displays checking for proper
-              functionality of recently added features prior to release</li>
-          </ul>
-        </div>
-        <div class="workTerm" id="Bell">
-          <img class="Logo" src="/assets/Images/BellLogo.png">
-          <ul>
-            <li>
-              Wrote a script to sort over 300 000 home address’ in rural communities across Newfoundland for fibre optic expansion programs 
-            </li>
-            <li>
-              Minimized work interruptions for over 50 employees while new laptops were being distributed by upgrading main database to be compatible with both 32-bit and 64-bit operating systems
-            </li>
-            <li>
-              Automated data entry for main SQL database eliminating manual entry saving employees 2 hours of work a week
-            </li>
-          </ul>
-        </div>
-        <div class="workTerm" id="Cahill">
-          <img class="Logo" src="/assets/Images/CahillLogo.png">
-          <ul>
-            <li>
-              Communicated with on-site workers and suppliers to ensure the on-time delivery of 1000+ materials
-            </li>
-            <li>
-              Prepared a cost estimate for installing new medical gas equipment in Newfoundland’s largest hospital by
-              analyzing drawings and using Bluebeam to calculate required materials and labour hours
-            </li>
-          </ul>
+          <div class="grid-item" id="avalonHolographics">
+              <img src="/assets/Images/AvalonLogo.png" alt="Description of Image 2" class="grid-image">
+              <p class="grid-text">Avalon Holographics</p>
+              <p>Software Development Co-op Student</p>
+              <p>September 2023 - December 2023</p>
+              <p>I worked on a battle space simulation desktop application. The application is desgined to be used on
+                Avalon's Holographics' 3D displays. The app features a 3D render of earth and allows users to upload 3D
+                tilesets of any city and display them on the 3D displays. I used C++ along with the ImGui library to add features
+                to the application. I also used HLSL to add different shading effects.
+              </p>
+          </div>
+          <div class="grid-item">
+              <img src="/assets/Images/BellLogo.png" alt="Description of Image 3" class="grid-image">
+              <p class="grid-text">Bell Canada</p>
+              <p>Network Specialist Student</p>
+              <p>January 2023 - April 2023</p>
+              <p>I was a member of the Access Engineering team in St. John's, NL. This team is focused on
+                expanding Bell's fibre optic internet services to rural communities across Newfoundland. During
+                my time with the team I completed various upgrades to their Microsoft Access database including automating
+                data entry and I created a script to sort house addresses from across the province. 
+              </p>
+          </div>
+          <div class="grid-item">
+              <img src="/assets/Images/CahillLogo.png" alt="Description of Image 4" class="grid-image">
+              <p class="grid-text">The Cahill Group</p>
+              <p>Project Management Student</p>
+              <P>May 2022 - August 2022</P>
+              <p>During my time with the company I worked as a project manager. I ordered materials and tools for various construction jobs across
+                the province and completed safety walkthroughs and documentation. I also preformed a cost estimate 
+                for a medical gas piping upgrade for Newfoundland's largest hospital.
+              </p>
+          </div>
         </div>
       </div>
 
-      <div id="extracurriculars">
+      <div id="extracurriculars">  
         <h1>Extracurriculars</h1>
-        <div class="extracurricular">
-          <img class="Logo" src="/assets/Images/CahillLogo.png">
-          <p>
-            Work term info hhhhhhh
-          </p>
+        <div class="grid-container">
+          <div class="grid-item" id="EOSuccessCentre">
+              <img src="/assets/Images/CRCLogo.png" alt="Description of Image 1" class="grid-image">
+              <p class="grid-text">Engineering One Student Success Centre</p>
+              <p> I have been a tutor at MUN's Engineering One Success Centre since my second year of 
+                university. Each semester myself and the other tutors offer assitance to first year engineering 
+                students. I tutor students in math, physics and programming.
+              </p>
+          </div>
+          <div class="grid-item" id="IcebergASV">
+              <img src="/assets/Images/AvalonLogo.png" alt="Description of Image 2" class="grid-image">
+              <p class="grid-text">IcebergASV</p>
+              <p>Iceberg ASV is a student design team at MUN. We compete annually at RoboBoats competiton in Florida 
+                and recently we competed in the Njord Autonomous Ship Challenge in Norway. I am a member of the software team.
+                Myself and the other memebers write code using C++ along with ROS2 to allow the student built boat to
+                complete tasks related to navigation, manuevering and docking autonomously.
+              </p>
+          </div>
+          <div class="grid-item" id="GWG">
+              <img src="/assets/Images/BellLogo.png" alt="Description of Image 3" class="grid-image">
+              <p class="grid-text">Bell Canada</p>
+          </div>
+          <div class="grid-item" id="SWM">
+              <img src="/assets/Images/CahillLogo.png" alt="Description of Image 4" class="grid-image">
+              <p class="grid-text">The Cahill Group</p>
+          </div>
         </div>
-
-
-
       </div>
-
 
     </body>
-
-
-
-
-
 
 </html>
