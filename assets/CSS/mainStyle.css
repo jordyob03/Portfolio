@@ -163,9 +163,4 @@ body {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.2em; /* Adjust the size as needed */
-  color: inherit;   /* This makes the link use the same color as the surrounding text */
-}
-
-.grid-item a:hover {
-  text-decoration: underline; /* Optional: Adds an underline on hover */
-}
+  color: inherit;   /* This makes the link use the same col
